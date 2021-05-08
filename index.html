@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do Login</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- login form starts  -->
+    <div class="col-lg-3 login ">
+        <h1 id="heading">ToDo List</h1>
+        <form action="mainpage.html" onsubmit="return validate(loginError);" >
+            <div class="row mb-3">
+            <div class="col-sm-12">
+            <label for="Username">Username</label>
+            <input type="text" class="form-control"  id="Username" placeholder="Username" required>
+            <label for="error" id="error"></label><br>
+            </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-12">
+            <label for="Password">Password</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Password" required>
+            <label for="password" id="pwd-error"></label><br>
+            <button type="submit" class="btn btn-primary" id="submit" >Login</button>
+            </div>
+            </div>
+        </form>
+    </div>
+    <!-- login form end  -->
+<script src="todo.js"></script>
+</body>
+</html>
