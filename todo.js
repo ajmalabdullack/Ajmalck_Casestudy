@@ -28,12 +28,19 @@ function loadDoc() {
       var demo = document.getElementById("demo");
       // demo.innerHTML = "";
       var demo="";
-      for(var i =0; i<resp.length; i++){
-        var currentRecord = resp[i];
-        demo += "<tr><td>"+currentRecord.id+"</td><td>"+currentRecord.title+"</td><td><input type='checkbox' name='test' value="+currentRecord.completed+"></td></tr>"
-    }
-    document.getElementById("tableBody").innerHTML = demo;
-}
+       for (var i=0;i<resp.length;i++){
+      var currentData =resp[i];
+      demo+= `<tr><td>${currentData.title}</td><td><input type="checkbox" ${chekchek(currentData.completed)} value=${currentData.title}</td></tr>`
+    };
+    document.getElementById("tableBody").innerHTML= demo;
+      }
+    
+  
+  function chekchek(value1){
+    console.log(value1);
+    if(value1){return "disabled"}  else{return null;}
+  };
+
 }
        var count =0;
     
